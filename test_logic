@@ -1,0 +1,10 @@
+branch=AIA-99999_something_feature  
+base_branch=preview 
+new_base=develop
+newbranch="merge-${new_base}-${branch}"
+
+echo $newbranch                                                                               merge-develop-AIA-99999_something_feature
+
+git checkout -b "$newbranch" "origin/$new_base"
+
+git merge "origin/$base_branch"
